@@ -7,7 +7,7 @@ public class Plane {
      int flightNumber;
      int time;
      String pointOfArrival;
-     List<Passengers> passengerslist = new ArrayList<>();
+     List<Passenger> passengerlist = new ArrayList<>();
 
      public Plane(int flightNumber, int time, String pointOfArrival) {
           this.flightNumber = flightNumber;
@@ -15,38 +15,38 @@ public class Plane {
           this.pointOfArrival = pointOfArrival;
      }
 
-     public void addPassengers(String name, String surname, int seat, String privilege) {
-          Passengers passengers = new Passengers(name, surname, seat, privilege);
-          passengerslist.add(passengers);
+     public void addPassenger(String name, String surname, int seat, String privilege) {
+          Passenger passenger = new Passenger(name, surname, seat, privilege);
+          passengerlist.add(passenger);
      }
 
-     public void printAllPassengers() {
-          for (int i = 0; i < passengerslist.size(); i++) {
-               Passengers result = passengerslist.get(i);
+     public void printAllPassenger() {
+          for (int i = 0; i < passengerlist.size(); i++) {
+               Passenger result = passengerlist.get(i);
                result.printInformation();
           }
      }
 
      public void infoFirst() {
-          System.out.println(flightNumber + " " + time + " " + pointOfArrival);
+           System.out.println(flightNumber + " " + time + " " + pointOfArrival);
      }
 
      public void infoSecond(){
-          System.out.println(flightNumber + " " + time + " " + pointOfArrival);
+           System.out.println(flightNumber + " " + time + " " + pointOfArrival);
      }
 
      public static void main(String[] args) {
            Plane a = new Plane(365, 9, "Berlin");
-           a.addPassengers("Ivan", "Gorshkov", 5, "Business");
-           a.addPassengers("Svetlana","Alekseeva",10, "Economy");
+           a.addPassenger("Ivan", "Gorshkov", 5, "Business");
+           a.addPassenger("Svetlana","Alekseeva",10, "Economy");
            a.infoFirst();
-           a.printAllPassengers();
+           a.printAllPassenger();
            System.out.println();
            Plane b = new Plane(125, 11, "Oslo");
-           b.addPassengers("Igor", "Stepanov", 14, "Economy");
-           b.addPassengers("Aleksei", "Ivanov", 2, "Business");
+           b.addPassenger("Igor", "Stepanov", 14, "Economy");
+           b.addPassenger("Aleksei", "Ivanov", 2, "Business");
            b.infoSecond();
-           b.printAllPassengers();
+           b.printAllPassenger();
      }
 }
 
