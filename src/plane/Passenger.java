@@ -1,12 +1,12 @@
 package plane;
 
-public class Passengers {
+public class Passenger {
      String name;
      String surname;
      int seat;
      String privilege;
 
-     public Passengers(String name, String surname, int seat, String privilege){
+     public Passenger(String name, String surname, int seat, String privilege){
      this.name = name;
      this.surname = surname;
      this.seat = seat;

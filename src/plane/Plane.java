@@ -32,20 +32,21 @@ public class Plane {
      }
 
      public void infoSecond(){
-          System.out.println(flightNumber + " " + time + " " + pointOfArrival); }
-
-        public static void main(String[] args) {
-               Plane a = new Plane(365, 9, "Berlin");
-               a.addPassengers("Ivan", "Gorshkov", 5, "Business");
-               a.addPassengers("Svetlana","Alekseeva",10, "Economy");
-               a.infoFirst();
-               a.printAllPassengers();
-             System.out.println();
-               Plane b = new Plane(125, 11, "Oslo");
-               b.addPassengers("Igor", "Stepanov", 14, "Economy");
-               b.addPassengers("Aleksei", "Ivanov", 2, "Business");
-               b.infoSecond();
-               b.printAllPassengers();
-             }
+          System.out.println(flightNumber + " " + time + " " + pointOfArrival);
      }
+
+     public static void main(String[] args) {
+           Plane a = new Plane(365, 9, "Berlin");
+           a.addPassengers("Ivan", "Gorshkov", 5, "Business");
+           a.addPassengers("Svetlana","Alekseeva",10, "Economy");
+           a.infoFirst();
+           a.printAllPassengers();
+           System.out.println();
+           Plane b = new Plane(125, 11, "Oslo");
+           b.addPassengers("Igor", "Stepanov", 14, "Economy");
+           b.addPassengers("Aleksei", "Ivanov", 2, "Business");
+           b.infoSecond();
+           b.printAllPassengers();
+     }
+}
 
